@@ -1,0 +1,9 @@
+D:\Work\BoostBoot\BoostBoot\Driver\bin\Debug\netstandard2.0\Driver.deps.json
+D:\Work\BoostBoot\BoostBoot\Driver\bin\Debug\netstandard2.0\Driver.dll
+D:\Work\BoostBoot\BoostBoot\Driver\obj\Debug\netstandard2.0\Driver.csprojResolveAssemblyReference.cache
+D:\Work\BoostBoot\BoostBoot\Driver\obj\Debug\netstandard2.0\Driver.csproj.CoreCompileInputs.cache
+D:\Work\BoostBoot\BoostBoot\Driver\obj\Debug\netstandard2.0\Driver.AssemblyInfoInputs.cache
+D:\Work\BoostBoot\BoostBoot\Driver\obj\Debug\netstandard2.0\Driver.AssemblyInfo.cs
+D:\Work\BoostBoot\BoostBoot\Driver\bin\Debug\netstandard2.0\Driver.pdb
+D:\Work\BoostBoot\BoostBoot\Driver\obj\Debug\netstandard2.0\Driver.dll
+D:\Work\BoostBoot\BoostBoot\Driver\obj\Debug\netstandard2.0\Driver.pdb

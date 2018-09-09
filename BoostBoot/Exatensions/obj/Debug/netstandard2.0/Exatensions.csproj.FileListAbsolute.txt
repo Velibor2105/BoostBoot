@@ -1,0 +1,9 @@
+D:\Work\BoostBoot\BoostBoot\Exatensions\bin\Debug\netstandard2.0\Exatensions.deps.json
+D:\Work\BoostBoot\BoostBoot\Exatensions\bin\Debug\netstandard2.0\Exatensions.dll
+D:\Work\BoostBoot\BoostBoot\Exatensions\bin\Debug\netstandard2.0\Exatensions.pdb
+D:\Work\BoostBoot\BoostBoot\Exatensions\obj\Debug\netstandard2.0\Exatensions.csprojResolveAssemblyReference.cache
+D:\Work\BoostBoot\BoostBoot\Exatensions\obj\Debug\netstandard2.0\Exatensions.csproj.CoreCompileInputs.cache
+D:\Work\BoostBoot\BoostBoot\Exatensions\obj\Debug\netstandard2.0\Exatensions.AssemblyInfoInputs.cache
+D:\Work\BoostBoot\BoostBoot\Exatensions\obj\Debug\netstandard2.0\Exatensions.AssemblyInfo.cs
+D:\Work\BoostBoot\BoostBoot\Exatensions\obj\Debug\netstandard2.0\Exatensions.dll
+D:\Work\BoostBoot\BoostBoot\Exatensions\obj\Debug\netstandard2.0\Exatensions.pdb

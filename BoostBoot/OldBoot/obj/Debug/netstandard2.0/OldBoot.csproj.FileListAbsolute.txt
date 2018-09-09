@@ -1,0 +1,15 @@
+D:\Work\BoostBoot\BoostBoot\OldBoot\bin\Debug\netstandard2.0\OldBoot.deps.json
+D:\Work\BoostBoot\BoostBoot\OldBoot\bin\Debug\netstandard2.0\OldBoot.dll
+D:\Work\BoostBoot\BoostBoot\OldBoot\bin\Debug\netstandard2.0\OldBoot.pdb
+D:\Work\BoostBoot\BoostBoot\OldBoot\bin\Debug\netstandard2.0\DataAccessLayer.dll
+D:\Work\BoostBoot\BoostBoot\OldBoot\bin\Debug\netstandard2.0\Driver.dll
+D:\Work\BoostBoot\BoostBoot\OldBoot\bin\Debug\netstandard2.0\Exatensions.dll
+D:\Work\BoostBoot\BoostBoot\OldBoot\bin\Debug\netstandard2.0\DataAccessLayer.pdb
+D:\Work\BoostBoot\BoostBoot\OldBoot\bin\Debug\netstandard2.0\Driver.pdb
+D:\Work\BoostBoot\BoostBoot\OldBoot\bin\Debug\netstandard2.0\Exatensions.pdb
+D:\Work\BoostBoot\BoostBoot\OldBoot\obj\Debug\netstandard2.0\OldBoot.csprojResolveAssemblyReference.cache
+D:\Work\BoostBoot\BoostBoot\OldBoot\obj\Debug\netstandard2.0\OldBoot.csproj.CoreCompileInputs.cache
+D:\Work\BoostBoot\BoostBoot\OldBoot\obj\Debug\netstandard2.0\OldBoot.AssemblyInfoInputs.cache
+D:\Work\BoostBoot\BoostBoot\OldBoot\obj\Debug\netstandard2.0\OldBoot.AssemblyInfo.cs
+D:\Work\BoostBoot\BoostBoot\OldBoot\obj\Debug\netstandard2.0\OldBoot.dll
+D:\Work\BoostBoot\BoostBoot\OldBoot\obj\Debug\netstandard2.0\OldBoot.pdb
