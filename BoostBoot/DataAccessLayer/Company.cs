@@ -48,6 +48,7 @@ namespace DataAccessLayer
         public string EbitdaText { get; set; }
         public object PdvNumber { get; set; }
         public string Email { get; set; }
+        public bool? NotExist { get; set; }
     }
 
     public class RootObject

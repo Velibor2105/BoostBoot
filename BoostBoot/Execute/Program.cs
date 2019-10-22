@@ -1,29 +1,87 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Driver;
-using NewBoot;
-using OldBoot;
+using DataAccessLayer;
+using System.Threading;
+using OpenQA.Selenium;
+using Exatensions;
 
 namespace Execute
 {
     class Program
     {
-        
+
         static void Main(string[] args)
         {
-            // Driver.DriverFactroy newDriver = new DriverFactroy(@"C:\sel");
-            // NewBoot.BussinesLogic newbl = new BussinesLogic(newDriver.Create());
+            var driverNew = LoginToNewApp();
 
-            // newbl.Start();
+            using (var db = new CompanyContext())
+            {
+                var companies = db.Company.Where(comp => comp.AprStatus == "Aktivan" 
+                                                         && (comp.PhoneNumber != null || comp.Email != null) 
+                                                         && comp.NotExist == null)
+                                          .OrderByDescending(x => x.NumberOfEmployees);
 
-            Driver.DriverFactroy oldDriver = new DriverFactroy(@"C:\sel");
-            OldBoot.BusinessLogic oldbl = new BusinessLogic(oldDriver.Create());
+                foreach (var company in companies)
+                {
+                    Console.WriteLine(company.CompanyName.Replace('-', ' '));
+                    Console.WriteLine("------------------------------------------------------------------");
+                    var be = company.CompanyName.StringFilter().Replace('-', ' ');
+                    SelectorNew.SearchBox.Element(driverNew).SendKeys(company.CompanyName.StringFilter().Replace('-',' '));
+                    ClickWait(driverNew);
+                    var existingCompanies = SelectorNew.ExistingCompanies.Elements(driverNew);
 
-            oldbl.Start();
+                    if (existingCompanies.Count < 1)
+                    {
+                        using (var updateDb = new CompanyContext())
+                        {
+                            var res = updateDb.Company.Where(c => c.CompanyID == company.CompanyID).SingleOrDefault();
+                            res.NotExist = true;
+                            updateDb.SaveChanges();
+                        }
+                    }
+                    else
+                    {
+                        using (var updateDb = new CompanyContext())
+                        {
+                            var res = updateDb.Company.Where(c => c.CompanyID == company.CompanyID).SingleOrDefault();
+                            res.NotExist = false;
+                            updateDb.SaveChanges();
+                        }
+                    }
 
+                    SelectorNew.SearchBox.Element(driverNew).Clear();
+                }
+            }
+        }
+
+        public static IWebDriver LoginToNewApp()
+        {
+            Driver.DriverFactroy newDriver = new DriverFactroy(@"C:\sel");
+            var driverNew = newDriver.Create();
+            driverNew.Navigate().GoToUrl("http://boost-crm.konsera.hr/");
+
+            //------Login to the new database------//
+            SelectorNew.UserName.Element(driverNew).SendKeys("petra");
+            SelectorNew.Password.Element(driverNew).SendKeys("petra321");
+            SelectorNew.LoginButton.Element(driverNew).Click();
+
+            return driverNew;
+        }
+
+
+        public static void ClickWait(IWebDriver driver)
+        {
+            try
+            {
+                driver.FindElement(By.CssSelector("div.desktop-bar > ul > li:nth-child(3) > form > div > span > button")).Click();
+            }
+            catch (Exception)
+            {
+                Thread.Sleep(10000);
+                Console.WriteLine("excption");
+                ClickWait(driver);
+            }
         }
     }
 }

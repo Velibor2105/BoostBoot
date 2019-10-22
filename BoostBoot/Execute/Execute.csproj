@@ -55,15 +55,25 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SelectorNew.cs" />
+    <Compile Include="SelectorOld.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{e144968e-ea0d-4627-abaa-89a74b31e32b}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Driver\Driver.csproj">
       <Project>{bea444bd-4e17-4b41-932d-f7af54591ccf}</Project>
       <Name>Driver</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Exatensions\Exatensions.csproj">
+      <Project>{59492478-5b81-4894-8b38-f2f0cd6c2faa}</Project>
+      <Name>Exatensions</Name>
     </ProjectReference>
     <ProjectReference Include="..\NewBoot\NewBoot.csproj">
       <Project>{3550e9eb-bc18-4445-8aec-453e1e819eb5}</Project>

@@ -8,7 +8,7 @@ namespace Exatensions
         public static string StringFilter(this String input)
         {
             string newWord = null;
-            input = input.ToLower().Replace('(',' ').Replace(')',' ').Replace(',',' ');
+            input = input.ToLower().Replace('-',' ').Replace('(',' ').Replace(')',' ').Replace(',',' ');
 
             if (input.Contains("novi sad"))
             {
@@ -53,6 +53,7 @@ namespace Exatensions
                     if (item.ToLower() == city.ToLower())
                     {
                         cityToRemove = item;
+                        break;
                     }
                 }
 
@@ -61,7 +62,11 @@ namespace Exatensions
                     newWord += " " + item;
                 }
             }
-            return newWord.Remove(0, 1);
+
+            if(newWord != null)
+                return newWord.Remove(0, 1);
+
+            return "NotExistingItemInTheDatabase";
         }
 
         public static List<string> FilterCities()
@@ -97,7 +102,8 @@ namespace Exatensions
                 "Bor",
                 "Prokuplje",
                 "Loznica",
-                "Srbija"
+                "Srbija",
+                "Novi"
             };
         }
     }
